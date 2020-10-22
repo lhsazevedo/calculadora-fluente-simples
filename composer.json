@@ -1,0 +1,17 @@
+{
+    "name": "lucas/calculadora-fluente-simples",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Lucas Henrique",
+            "email": "lhs_azevedo@hotmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^9.4"
+    },
+    "scripts": {
+        "test": "phpunit --bootstrap vendor/autoload.php --stop-on-failure --testdox --colors CalculadoraTest.php"
+    }
+}
