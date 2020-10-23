@@ -7,6 +7,18 @@ require_once "Calculator.php";
 
 class CalculatorTest extends TestCase
 {
+    public function test_instance_initialization()
+    {
+        $calculator = new Calculator(1);
+        $this->assertSame(1,    $calculator->result());
+        
+        $calculator2 = new Calculator(2);
+        $this->assertSame(2,    $calculator->result());
+        
+        $calculator3 = new Calculator(10);
+        $this->assertSame(10,    $calculator->result());
+    }
+    
     public function test_initialization()
     {
         $this->assertSame(1,    Calculator::init(1)->result());
