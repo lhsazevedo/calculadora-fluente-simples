@@ -13,10 +13,10 @@ class CalculatorTest extends TestCase
         $this->assertSame(1,    $calculator->result());
         
         $calculator2 = new Calculator(2);
-        $this->assertSame(2,    $calculator->result());
+        $this->assertSame(2,    $calculator2->result());
         
         $calculator3 = new Calculator(10);
-        $this->assertSame(10,    $calculator->result());
+        $this->assertSame(10,    $calculator3->result());
     }
     
     public function test_initialization()
