@@ -5,21 +5,35 @@ use SebastianBergmann\Type\ObjectType;
 
 class Calculator
 {
-    public static $num;  
+    public $num;  
 
-    public static function init($n)
+    public function __construct($num)
+    {   
+        $this->num = $num;
+    }
+
+    public static function init($num = 0)
     {
-        $n = new self;
-        $n->num = $n;
+        return new self($num);
+    }
 
-        var_dump($n);
+    public function plus($num)
+    {
+        $this->num += $num;
 
-        return $n;
+        return $this;
+    }
+
+    public function minus($num)
+    {
+        $this->num -= $num;
+
+        return $this;
     }
 
     public function result()
     {
-        
+        return $this->num;
     }
 }
 
