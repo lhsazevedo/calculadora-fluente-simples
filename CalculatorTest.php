@@ -1,7 +1,6 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use SebastianBergmann\Complexity\Calculator;
 
 require_once "Calculator.php";
 
