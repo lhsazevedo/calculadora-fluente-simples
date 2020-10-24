@@ -48,11 +48,11 @@ class CalculatorTest extends TestCase
 
     public function test_basic_subtraction()
     {
-        $this->assertSame(5,   Calculator::init(10)->minus(5));
-        $this->assertSame(0,   Calculator::init(1)->minus(1));
-        $this->assertSame(27,  Calculator::init(64)->minus(37));
-        $this->assertSame(-25, Calculator::init(18)->minus(43));
-        $this->assertSame(100, Calculator::init(999)->minus(899));
-        $this->assertSame(0,   Calculator::init(0)->minus(0));
+        $this->assertSame(5,   Calculator::init(10)->minus(5)->result());
+        $this->assertSame(0,   Calculator::init(1)->minus(1)->result());
+        $this->assertSame(27,  Calculator::init(64)->minus(37)->result());
+        $this->assertSame(-25, Calculator::init(18)->minus(43)->result());
+        $this->assertSame(100, Calculator::init(999)->minus(899)->result());
+        $this->assertSame(0,   Calculator::init(0)->minus(0)->result());
     }
 }
