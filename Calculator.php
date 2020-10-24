@@ -1,8 +1,5 @@
 <?php
 
-use phpDocumentor\Reflection\Types\Integer;
-use SebastianBergmann\Type\ObjectType;
-
 class Calculator
 {
     public $num;  
