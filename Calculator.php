@@ -3,7 +3,7 @@
 class Calculator{
 
 
-        // https://www.php.net/manual/pt_BR/language.oop5.properties.php -> Exemplo #2 Exemplo de propriedades tipadas
+        //https://www.php.net/manual/pt_BR/language.oop5.properties.php -> Exemplo #2 Exemplo de propriedades tipadas
 
 
 
