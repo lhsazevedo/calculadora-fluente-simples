@@ -16,7 +16,8 @@ class CalculatorTest extends TestCase
         
         $calculator3 = new Calculator(10);
         $this->assertSame(10,    $calculator3->result());
-    }
+    } 
+    
     
     public function test_initialization()
     {
@@ -25,6 +26,7 @@ class CalculatorTest extends TestCase
         $this->assertSame(10,   Calculator::init(10)->result());
         $this->assertSame(0,    Calculator::init()->result());
     }
+    
 
     public function test_basic_sum()
     {
@@ -54,5 +56,6 @@ class CalculatorTest extends TestCase
         $this->assertSame(-25, Calculator::init(18)->minus(43)->result());
         $this->assertSame(100, Calculator::init(999)->minus(899)->result());
         $this->assertSame(0,   Calculator::init(0)->minus(0)->result());
-    }
+
+    } 
 }

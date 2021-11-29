@@ -1,42 +1,48 @@
 <?php
 
+require_once 'Calculo.php';
 class Calculator{
 
 
-        //https://www.php.net/manual/pt_BR/language.oop5.properties.php -> Exemplo #2 Exemplo de propriedades tipadas
+  public $total;
+
+//https://www.php.net/manual/pt_BR/language.oop5.properties.php -> Exemplo #2 Exemplo de propriedades tipadas
 
 
+    public function __construct(int $x){  //recebe a variavel como parametro
+     
+      
 
-//declaro uma variavel como propriedade.
-public $x; 
-
-//metodo contrutor. Já inicia assim que a classe é instanciada. Aqui, recebendo um parametro
-//este parametro, agora se torna um atribudo e é atribuido a proriedade x
-
-
-
-public function __construct(int $x) {
+      $this->total = $x;   //atribui o parametro à variavel $total
     
-     $this->x = $x; 
+    }
 
-}
+// ================================================================= result
+ 
+    public function result(){    //como um metodo get, result() retorna o valor atribuido a variavel $total.
+      return $this->total;
+ }
 
+// =================================================================  init
 
+    public static function init(int $x = 0){ //A variavl solicita ao menos um inteiro, mesmo que o valor seja zero
+            return new Calculator($x);   //ou return new self($x)     .dessa forma, a variavel será jogada para o escopo global e será interpretado pelo metodo construtor
 
-//metodo result, que tem por objetivo retornar o valor da variavel declarada com propriedade x
-//retorna quando for chamado
-
-public function result(){ 
-    return $this->x; 
+// =============================================================== Metodo Plus()
 
   }
+    public function plus(int $y){ //ENCADEMAMENTO DE METODOS -> https://pt.stackoverflow.com/questions/105259/o-que-%C3%A9-encadeamento-de-m%C3%A9todos
+      $this->total = $this->total + $y;
+      return $this;
+    }
+
+
+    public function minus(int $y){ //ENCADEAMENTO DE METODOS -> https://pt.stackoverflow.com/questions/105259/o-que-%C3%A9-encadeamento-de-m%C3%A9todos
+      $this->total = $this->total - $y;
+      return $this;
+    }
+   
+
 }
-
-
-//=========================================================================
-
-
-
-
 
 ?>
