@@ -1,10 +1,9 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
-
+use Test;
 require_once "Calculator.php";
 
-class CalculatorTest extends TestCase
+class CalculatorTest extends Test
 {
     public function test_instance_initialization()
     {
@@ -17,15 +16,17 @@ class CalculatorTest extends TestCase
         $calculator3 = new Calculator(10);
         $this->assertSame(10,    $calculator3->result());
     }
+
     
-    public function test_initialization()
+   
+ public function test_initialization()
     {
         $this->assertSame(1,    Calculator::init(1)->result());
         $this->assertSame(2,    Calculator::init(2)->result());
         $this->assertSame(10,   Calculator::init(10)->result());
         $this->assertSame(0,    Calculator::init()->result());
-    }
-
+  } 
+} /*
     public function test_basic_sum()
     {
         $this->assertSame(2,    Calculator::init(1)->plus(1)->result());
